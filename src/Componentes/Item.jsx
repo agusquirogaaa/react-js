@@ -2,10 +2,10 @@ import React from 'react'
 
 
 const Item = ({ productos }) =>{
-    console.log(productos.id)
+    
     return(
 
-        <div  key={productos.id}>
+        <div>
             <img  src= {productos.url} alt="img"/>
             <div>{productos.name}</div>
             <div> {productos.precio} </div>
