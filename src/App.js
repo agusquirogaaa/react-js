@@ -1,19 +1,25 @@
 import React from 'react';
+import {BrowserRouter, Routes, Route} from "react-router-dom"
 import './App.css';
 import ItemListContainer from './Componentes/ItemListContainer';
 import ItemDetailContainer from './Container/ItemDetailContainer';
 import NavBar from './Componentes/NavBar';
-import ItemCount from './Componentes/ItemCount';
+import Nosotros from './Componentes/Nosotros/Nosotros';
+import Contacto from './Componentes/Contacto/Contacto';
+
 
 
 function App() {
   return ( 
-    <>
-    <NavBar />
-    <ItemListContainer />
-    <ItemCount />
-    <ItemDetailContainer />
-    </>
+    <BrowserRouter>   
+      <NavBar />
+      <Routes> 
+        <Route path="/" element={<ItemListContainer />} />
+        <Route path="/detalle:detalleId" element={<ItemDetailContainer />} />
+        <Route path="/contacto" element={<Contacto />} />
+        <Route path="/nosotros" element={<Nosotros />} />
+      </Routes>
+    </BrowserRouter>  
   );
 
 }

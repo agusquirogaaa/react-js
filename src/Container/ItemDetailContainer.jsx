@@ -7,7 +7,7 @@ const ItemDetailContainer = () => {
     const [producto, setProducto] = useState({})
     const [loading, setLoading] = useState(true)
     // const { detalleId } = useParams()
-
+    
     useEffect(() => {
         getFetch()  // fetch llamada a una api
         .then(respuesta=> setProducto(respuesta))
@@ -15,10 +15,10 @@ const ItemDetailContainer = () => {
         .finally(()=> setLoading(false))
     }, [])
 
-    console.log(producto)
+    
     return (
         <div>
-            { loading ? <div className="lds-dual-ring loadercentrado"></div>  // loading true
+            { loading ? <div className="lds-dual-ring "></div>  // loading true
                     :
                     <div className="contenedorILC">
                         <ItemDetail producto= {producto}/>

@@ -1,0 +1,51 @@
+.lobo {
+    width: 100px;
+    height: 100px;
+    display:flex;
+    justify-self: center;
+    align-self: center;
+    margin-left:50px;
+    
+    
+}
+
+#navbar{
+    background-color: black;
+    display: flex;
+    height:150px;
+    
+    
+}
+
+#barrita {
+    height: 10rem;
+    display:flex;
+    gap:50px;
+    margin-left: 600px;
+    justify-content: center;
+    align-items:center;
+    
+}
+
+.barra {
+    text-decoration: none;
+    color:white;
+    font-size: 30px;
+    justify-self: center;
+    align-self:center;
+        
+}
+
+
+.logocarro {
+    background-color:rgb(231, 231, 231);
+    height:70px;
+    width: 70px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-left:120px;
+
+
+    
+}

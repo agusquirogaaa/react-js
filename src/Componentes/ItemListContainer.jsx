@@ -2,6 +2,7 @@ import React from "react";
 import ItemList  from "./ItemList";
 import { useEffect, useState } from "react"
 import { getFetch } from "../helpers/getFetch";
+import "./ItemListContainer.css" 
 
 
   export default function ItemListContainer() {

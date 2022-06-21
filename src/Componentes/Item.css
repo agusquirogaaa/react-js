@@ -1,0 +1,13 @@
+#texto {
+    display:flex;
+    justify-content: center;
+    flex-direction:column;
+    height:15rem;
+    align-items:center;
+    color:white;
+}
+
+#botonComprar {
+    height:100rem;
+    
+}
