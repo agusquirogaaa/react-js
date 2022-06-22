@@ -1,20 +1,25 @@
 import React from 'react';
 import "./ItemDetail.css";
+import ItemCount from "./ItemCount"
+
 
 
 const ItemDetail = ({producto}) => {
    
   return (
     <div>
-      {producto.map((prod) =>
-      <div key={prod.id} > 
-
-        <img src={prod.url} alt="remera" /> 
-        <h1 className="namee"> {prod.name} </h1>
-        <h1 className="namee"> {prod.precio} </h1>
-        <p> Las remeras son de Algodón. Tienen corte Oversize y es un único talle </p>
-
-      </div> )}
+      
+      <div key={producto.id} id="contenedordetail">
+          <div className="imagendetail"> 
+             <img src={producto.url} alt="remera" /> 
+          </div>
+          <div className="textodetail">
+             <h1> {producto.name.toUpperCase()} </h1>
+             <h1> {producto.precio} </h1>
+             <p> Las remeras son de Algodón. Tienen corte Oversize y es un único talle </p>
+              < ItemCount  stock={producto.stock}  />
+          </div>
+      </div> 
       
     </div>
   )

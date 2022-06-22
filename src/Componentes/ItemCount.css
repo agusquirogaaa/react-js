@@ -1,0 +1,11 @@
+.contador{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.stock {
+    display:flex;
+    gap:30px;
+    justify-content:center;
+}

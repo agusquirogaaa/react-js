@@ -7,7 +7,7 @@ import "./ItemListContainer.css"
 
   export default function ItemListContainer() {
 
-    const [productos, setProductos] = useState([])
+    const [productos, setProductos] = useState({})
     const [loading, setLoading] = useState(true);
    /* const [error, setError] = useState(false);
     const [resultado, setResultado] = useState([]); */
