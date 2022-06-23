@@ -2,37 +2,34 @@ import React from "react";
 import {useState} from "react";
 import "./ItemCount.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
+import CartContext from "./Context/CartContext"
 
 
-const Contar = (props) => {
+const Contar = ({initial, stock, onAdd}) => {
      
+    const [count, setConut] = useState(initial); 
 
-
-    const [contador, setContador] = useState(0)
-    
-
-    const sumar = () => {
-       setContador (contador + 1)
+    const handlerAdd = () =>{
+        if(count < stock){
+            setConut (count + 1)
+        }
     }
 
-    const restar = () => {
-        setContador(contador - 1)
+    const handlerSubtract = () =>{
+        if(count > initial){
+            setConut (count - 1)
+        }
     }
     
-    const Carrito = () => {
-        setContador(0)
-    }
-    
-
     return (
         <>
          <div className="contador">
             <div className="stock">
-                <button className="restar btn btn-outline-light" onClick = {restar}> - </button>
-                 <div className="boton">{contador} </div>
-                <button className="aumentar btn btn-outline-light" type="button" onClick = {sumar}> + </button>
+                <button className="restar btn btn-outline-light" onClick = {handlerSubtract}> - </button>
+                 <div className="boton">{count} </div>
+                <button className="aumentar btn btn-outline-light" type="button" onClick = {handlerAdd}> + </button>
             </div>
-            <button className="agregar btn btn-outline-light " onClick = {Carrito}> Agregar al Carrito </button>
+            <button className="agregar btn btn-outline-light " onClick = {()=> onAdd(count)}> Agregar al Carrito </button>
         </div>
         </>
     );

@@ -1,11 +1,18 @@
 import React from 'react';
 import "./ItemDetail.css";
 import ItemCount from "./ItemCount"
-
+import { useCartContext } from "../Context/CartContext"
 
 
 const ItemDetail = ({producto}) => {
    
+  const {addToCart} = useCartContext()
+
+  const onAdd = (cant) => {
+    console.log(cant)
+    addToCart( { ...producto, cantidad: cant } )
+  }
+
   return (
     <div>
       
@@ -17,7 +24,7 @@ const ItemDetail = ({producto}) => {
              <h1> {producto.name.toUpperCase()} </h1>
              <h1> {producto.precio} </h1>
              <p> Las remeras son de Algodón. Tienen corte Oversize y es un único talle </p>
-              < ItemCount  stock={producto.stock}  />
+              < ItemCount  initial="1" stock={producto.stock} onAdd={onAdd} />
           </div>
       </div> 
       
