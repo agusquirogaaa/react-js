@@ -7,12 +7,15 @@ import NavBar from './Componentes/NavBar';
 import Nosotros from './Componentes/Nosotros/Nosotros';
 import Contacto from './Componentes/Contacto/Contacto';
 import Tienda from './Componentes/Tienda/Tienda';
+import CartContextProvider from './Context/CartContext';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 
 function App() {
   return ( 
-    <BrowserRouter>   
+  <BrowserRouter> 
+    <CartContextProvider>
       <NavBar />
       <Routes> 
         <Route path="/" element={<ItemListContainer />} />
@@ -23,7 +26,8 @@ function App() {
         <Route path="/nosotros" element={<Nosotros />} />
         
       </Routes>
-    </BrowserRouter>  
+    </CartContextProvider>  
+  </BrowserRouter>  
   );
 
 }

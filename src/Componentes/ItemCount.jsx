@@ -1,8 +1,6 @@
 import React from "react";
 import {useState} from "react";
 import "./ItemCount.css"
-import 'bootstrap/dist/css/bootstrap.min.css';
-import CartContext from "./Context/CartContext"
 
 
 const Contar = ({initial, stock, onAdd}) => {

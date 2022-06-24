@@ -7,7 +7,7 @@
     color:white;
 }
 
-#botonComprar {
-    height:100rem;
-    
+.botonComprar {
+    color:white;
+    text-decoration: none;
 }

@@ -2,6 +2,7 @@ import React from 'react'
 import "./Item.css"
 import {Link} from 'react-router-dom'
 
+
 const Item = ({ productos }) =>{
     
     return(
@@ -12,7 +13,7 @@ const Item = ({ productos }) =>{
                 <h2>{productos.name}</h2>
                 <h2> {productos.precio} </h2>
                 <h2>Stock:{productos.stock}</h2>
-                <button id="botonComprar"> <Link to={`/detalle/${productos.id}`}> Comprar </Link></button>
+                <button  className="btn btn-outline-light botonComprar"> <Link to={`/detalle/${productos.id}`}> Comprar </Link></button>
             </div>
             
             

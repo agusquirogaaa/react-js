@@ -35,7 +35,11 @@
     align-self:center;
         
 }
-
+.barra:hover {
+    color: purple;
+    font-size:31px;
+    transition-duration: 1s;
+}
 
 .logocarro {
     background-color:rgb(231, 231, 231);
