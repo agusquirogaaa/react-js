@@ -26,7 +26,7 @@ const ItemDetail = ({producto}) => {
           </div>
           <div className="textodetail">
              <h1> {producto.name.toUpperCase()} </h1>
-             <h1> ${producto.precio} </h1>
+             <h1> {producto.precio} </h1>
              <p> Las remeras son de Algodón. Tienen corte Oversize y es un único talle </p>
              {isItemCount ?
               < ItemCount  initial={1} stock={producto.stock} onAdd={onAdd} />
@@ -35,7 +35,7 @@ const ItemDetail = ({producto}) => {
                         <Link to='/'>
                             <button className="btn btn-outline-light ">Seguir Comprando</button>
                         </Link>
-                        <Link to='/cart'>
+                        <Link to='/Cart'>
                             <button className="btn btn-outline-light ">Ir al carrito</button>
                         </Link>
                     </>
