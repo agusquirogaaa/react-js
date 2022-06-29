@@ -1,3 +1,9 @@
-.iconocarrito {
-    border: 1px solid red;
+.carrito {
+    color: white;
+   
+}
+
+.carrito:hover {
+    color:purple;
+    
 }

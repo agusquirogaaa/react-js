@@ -1,11 +1,11 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import "./CartWidget.css"
+import {Link} from "react-router-dom"
 
 
 function CartWidget () {
     return (
         <div> 
-             <FontAwesomeIcon icon="fa-regular fa-cart-shopping" />
+             <Link to="/Cart" className="carrito"><i className="fas fa-shopping-cart icono-carrito"></i></Link>
         </div>
     )
 }

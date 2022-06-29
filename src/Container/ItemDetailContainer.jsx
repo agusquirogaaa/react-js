@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import ItemDetail from '../Componentes/ItemDetail'
 import { getFetch } from '../helpers/getFetch'
+import "./ItemDetailContainer.css"
 
 const ItemDetailContainer = () => {
     const [producto, setProducto] = useState({})
@@ -20,7 +21,7 @@ const ItemDetailContainer = () => {
         <div>
             { loading ? <div className="lds-dual-ring "></div>  // loading true
                     :
-                    <div className="contenedorILC">
+                    <div className="contenedorILC productos">
                         <ItemDetail producto= {producto}/>  
                     </div>
             }

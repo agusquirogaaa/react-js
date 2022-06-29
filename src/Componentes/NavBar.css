@@ -4,7 +4,9 @@
     display:flex;
     justify-self: center;
     align-self: center;
-    margin-left:50px;
+    margin-right:500px;
+    margin-top:20px;
+
     
     
 }
@@ -13,27 +15,22 @@
     background-color: black;
     display: flex;
     height:150px;
-    
-    
+    justify-content: space-around;
+        
 }
 
 #barrita {
-    height: 10rem;
     display:flex;
-    gap:50px;
-    margin-left: 600px;
     justify-content: center;
     align-items:center;
-    
+    gap:50px;
 }
 
 .barra {
     text-decoration: none;
     color:white;
-    font-size: 30px;
-    justify-self: center;
-    align-self:center;
-        
+    font-size:30px;
+    
 }
 .barra:hover {
     color: purple;
@@ -41,15 +38,10 @@
     transition-duration: 1s;
 }
 
-.logocarro {
-    background-color:rgb(231, 231, 231);
-    height:70px;
-    width: 70px;
+.iconocarrito {
     display:flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
-    margin-left:120px;
-
-
-    
+    width:100px;
+    margin-left:500px;
 }

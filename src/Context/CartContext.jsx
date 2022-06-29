@@ -37,7 +37,7 @@ const CartContextProvider = ({children}) =>{
     }
 
     const priceTotal = () => {
-        return cartList.reduce((contador, prod) => contador + (prod.cantidad * prod.precio) ,0)
+        return cartList.reduce((contador, prod) => contador + (prod.cantidad) * (prod.precio), 0)
     }
 
     const emptyCart = () => {

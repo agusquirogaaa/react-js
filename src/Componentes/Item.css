@@ -5,9 +5,33 @@
     height:15rem;
     align-items:center;
     color:white;
+    
 }
 
 .botonComprar {
     color:white;
     text-decoration: none;
+    
+}
+
+
+.productosItem {
+    margin-top:50px;
+    background-color: black;
+    width:490px;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items:center;
+    margin-top:40px;
+    border-radius:70px;
+
+}
+
+.stockPalabras {
+    margin-bottom:30px;
+}
+.imagenTienda {
+    border-radius:30px;
+    margin-top:30px;
 }

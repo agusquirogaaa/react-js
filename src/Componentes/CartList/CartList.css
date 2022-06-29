@@ -1,3 +1,51 @@
-.Contenedor {
-    color:white;
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    background-color: white;
+    gap: 1.5rem;
+    border-radius: 1rem;
+    height: auto;
+    width: 90rem;
+    padding: 2rem;
+    
+    
+    
+}
+
+.item {
+    display: flex;
+    gap: 1.3rem;
+    max-width: 82rem;
+    margin-bottom:70px;
+}
+
+
+.imagen{
+    width: 206px;
+    height: 300px;
+    border-radius: 70px;
+    margin-right: 10px;
+}
+
+.vaciarCarrito {
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:35px;
+}
+
+.iconoBasura {
+    margin-left:5px;
+}
+
+.botonBorrar{
+    cursor:pointer;
+    height:35px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
 }

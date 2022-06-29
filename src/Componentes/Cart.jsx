@@ -13,18 +13,18 @@ const Cart = () => {
           <div> 
         
             {cartList.length === 0 ? 
-                <div className="cartnot">
-                    <label className="tituloCart">Usted no tiene productos en el carrito</label>
-                    <Link to='/' className="linkRoutes">
-                        <button className='tituloCart'>Seleccionar productos</button>
+                <div className="noProductos">
+                    <div className="textoCarritoVacio">Usted no tiene productos en el carrito</div>
+                    <Link to='/'>
+                        <button class="btn btn-outline-light seleccionarProductos">Seleccionar productos</button>
                     </Link>
                 </div>
             :
                 <>
                 
-                  <div className="cartItems" >
+                  <div id="carrito">
                       <div>
-                          <h2 className="tituloCart">Carrito <i className="fas fa-shopping-cart icono-carrito"></i></h2>
+                          <h2 className="tituloCart">Carrito <i className="fas fa-shopping-cart icono-carrito " ></i></h2>
                           <Cartlist/>
                       </div>
                   </div>  
