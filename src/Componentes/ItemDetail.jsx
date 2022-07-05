@@ -22,12 +22,12 @@ const ItemDetail = ({producto}) => {
       
       <div key={producto.id} id="contenedordetail">
           <div className="imagendetail"> 
-             <img src={producto.url} alt="remera" /> 
+             <img src={producto.imagenId} alt="remera" /> 
           </div>
           <div className="textodetail">
-             <h1> {producto.name.toUpperCase()} </h1>
+             <h1> {producto.nombre.toUpperCase()} </h1>
              <h1> ${producto.precio} </h1>
-             <p> Las remeras son de Algodón. Tienen corte Oversize y es un único talle </p>
+             <p>  </p>
              {isItemCount ?
               < ItemCount  initial={1} stock={producto.stock} onAdd={onAdd} />
               :  

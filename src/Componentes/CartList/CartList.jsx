@@ -8,8 +8,8 @@ const Cartlist = () => {
         <div className="contenedor">
         {cartList.map(product =>
             <div className="item" key={product.id}>
-                <img className="imagen" src={product.url} alt="imagen" height="150px"/>
-                <h5 className=""> {product.name}</h5>
+                <img className="imagen" src={product.imagenId} alt="imagen" height="150px"/>
+                <h5 className=""> {product.nombre}</h5>
                 <h5 className=""> Precio: ${product.precio}</h5>
                 <h5 className="">Cantidad:  {product.cantidad}</h5>
                 <button className='botonBorrar btn btn-outline-black' onClick={()=> removeItem(product.id)}>X</button> 
