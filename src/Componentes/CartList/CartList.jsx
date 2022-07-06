@@ -1,9 +1,10 @@
 import React from 'react'
 import { useCartContext } from '../../Context/CartContext'
 import "./CartList.css"
+import {Link} from "react-router-dom"
 
 const Cartlist = () => {
-    const { cartList,priceTotal,removeItem,emptyCart } = useCartContext()
+    const { cartList,precioTotal,removeItem,vaciarCarrito } = useCartContext()
     return (
         <div className="contenedor">
         {cartList.map(product =>
@@ -14,14 +15,15 @@ const Cartlist = () => {
                 <h5 className="">Cantidad:  {product.cantidad}</h5>
                 <button className='botonBorrar btn btn-outline-black' onClick={()=> removeItem(product.id)}>X</button> 
                 <div className="precioTotal">
-                <button onClick={emptyCart} className='vaciarCarrito btn btn-outline-black'>Vaciar carrito
+                <button onClick={vaciarCarrito} className='vaciarCarrito btn btn-outline-black'>Vaciar carrito
                     <i className="fa-solid fa-trash iconoBasura"></i>
                 </button>
-                <h2 className="cartItems__total">Total: ${priceTotal()}</h2> 
+                <h2 className="cartItems__total">Total: ${precioTotal()}</h2> 
                 </div>
-                </div>
+            </div>
                                                         
             )}
+        <Link to='/Checkout'> <button className="btn btn-outline-dark seleccionarProductos">Finalizar Compra</button> </Link>
         </div>
   )
 }

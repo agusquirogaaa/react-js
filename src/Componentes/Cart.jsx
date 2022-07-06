@@ -16,7 +16,7 @@ const Cart = () => {
                 <div className="noProductos">
                     <div className="textoCarritoVacio">Usted no tiene productos en el carrito</div>
                     <Link to='/'>
-                        <button class="btn btn-outline-light seleccionarProductos">Seleccionar productos</button>
+                        <button className="btn btn-outline-light seleccionarProductos">Seleccionar productos</button>
                     </Link>
                 </div>
             :
