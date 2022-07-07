@@ -71,19 +71,34 @@ export default function Checkout() {
   return (
     <>
     <div className="contenedorCheckout">
-
+        <div className="containerCard">
     {cartList.map(product =>   
-         <div key={product.id} >
-                <img src={product.imagenId}  alt="productos" /> {product.nombre} - precio: ${product.precio} - cantidad: {product.cantidad} {' '}
-                <button className='btn btn-outline-light' onClick={()=> removeItem(product.id)}> X </button> 
-                <br></br>
-                <input onChange={(e)=>setName(e.target.value)} className="btn btn-outline-light" placeholder="ingresa su nombre"></input>
-                <input onChange={(e)=>setCelular(e.target.value)} className="btn btn-outline-light" placeholder="ingresa su cel"></input>
-                <input onChange={(e)=>setEmail(e.target.value)} className="btn btn-outline-light" placeholder="ingresa su email"></input>
-         </div>)}
-        <h2>El precio total es: ${precioTotal()}</h2>
-        <button onClick={vaciarCarrito} className='btn btn-outline-light'>Vaciar carrito</button>
-        <button onClick={generarOrden} className='btn btn-outline-light'>Ralizar compra</button>                                                   
+            <div className="contenedorHijo1" key={product.id} >
+                <img src={product.imagenId}  alt="productos" className="imagenCheckout"/> 
+                <div className="infoProducto">
+                    <div className="infoProducto__texto">    
+                        <div><b> {product.nombre} </b></div>   
+                        <div><b> Precio: ${product.precio} </b></div>    
+                        <div><b> Cantidad: {product.cantidad} {' '} </b></div> 
+                    </div>
+                    <button className='btn btn-outline-light' onClick={()=> removeItem(product.id)}> X </button> 
+                </div>
+            </div>
+    )}
+        </div>
+            <div className="contenedorHijo2">   
+                <div className="formularioCheckout">
+                    <input onChange={(e)=>setName(e.target.value)} className="btn btn-outline-light" placeholder="ingresa su nombre"></input>
+                    <input onChange={(e)=>setCelular(e.target.value)} className="btn btn-outline-light" placeholder="ingresa su cel"></input>
+                    <input onChange={(e)=>setEmail(e.target.value)} className="btn btn-outline-light" placeholder="ingresa su email"></input>
+                </div>
+
+                <h2>El precio total es: ${precioTotal()}</h2>
+                <div>
+                    <button onClick={vaciarCarrito} className='btn btn-outline-light'>Vaciar carrito</button>
+                    <button onClick={generarOrden} className='btn btn-outline-light'>Ralizar compra</button>     
+                </div>                                              
+            </div>
     </div>
     </>
   )

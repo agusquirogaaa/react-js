@@ -1,3 +1,44 @@
 .contenedorCheckout {
     color:white;
+    background-color:black;
+    display:flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items:center;
+    gap:50px;
+    margin-top: 70px;
+    margin-bottom: 50px;
+    padding:70px 0px;
+}
+.containerCard {
+    display:flex;
+    flex-direction: column;
+}
+.contenedorHijo1 {
+    display:flex;
+    flex-direction: row;
+    margin-top:30px;
+    gap:70px;
+}
+.imagenCheckout {
+    height:148px; 
+    width:102px;
+    align-self:center;
+}
+.infoProducto {
+    display:flex;
+    justify-content:space-between;
+    margin-top:30px;
+    gap:70px;
+}
+.infoProducto__texto {
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+.formularioCheckout {
+    display:flex;
+    gap:20px;
+    margin-top:30px;
+
 }

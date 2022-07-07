@@ -8,10 +8,7 @@
     border-radius: 1rem;
     height: auto;
     width: 90rem;
-    padding: 2rem;
-    
-    
-    
+    padding: 2rem; 
 }
 
 .item {
@@ -29,13 +26,6 @@
     margin-right: 10px;
 }
 
-.vaciarCarrito {
-    border: 1px solid black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height:35px;
-}
 
 .iconoBasura {
     margin-left:5px;
@@ -48,4 +38,9 @@
     justify-content: center;
     align-items: center;
     border: 1px solid black;
+}
+
+.botonCart{
+    display:flex;
+    gap:120px;
 }

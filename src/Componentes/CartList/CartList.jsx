@@ -15,15 +15,18 @@ const Cartlist = () => {
                 <h5 className="">Cantidad:  {product.cantidad}</h5>
                 <button className='botonBorrar btn btn-outline-black' onClick={()=> removeItem(product.id)}>X</button> 
                 <div className="precioTotal">
-                <button onClick={vaciarCarrito} className='vaciarCarrito btn btn-outline-black'>Vaciar carrito
-                    <i className="fa-solid fa-trash iconoBasura"></i>
-                </button>
-                <h2 className="cartItems__total">Total: ${precioTotal()}</h2> 
+                
                 </div>
             </div>
                                                         
             )}
-        <Link to='/Checkout'> <button className="btn btn-outline-dark seleccionarProductos">Finalizar Compra</button> </Link>
+            <h2>Total: ${precioTotal()}</h2> 
+            <div className="botonCart">
+                <button onClick={vaciarCarrito} className='btn btn-outline-dark'>Vaciar carrito
+                          <i className="fa-solid fa-trash iconoBasura"></i>
+                </button>
+                <Link to='/Checkout'> <button className="btn btn-outline-dark">Finalizar Compra</button> </Link>
+            </div>
         </div>
   )
 }
