@@ -6,6 +6,17 @@ Las librerías que utlice son:
 - Bootstrap
 - React Router Dom
 - Sweet Alert
+
+
+![Video_React_AdobeExpress](https://user-images.githubusercontent.com/92046190/178601394-59041ea8-5c7a-48f9-a917-a7cd15e03fb1.gif)
+
+
+
+
+
+
+
+
 ## Available Scripts
 
 In the project directory, you can run:
