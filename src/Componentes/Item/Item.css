@@ -32,7 +32,9 @@
 }
 
 .stockPalabras {
+    margin-top:10px;
     margin-bottom:30px;
+    font-size:20px;
 }
 .imagenTienda {
     border-radius:30px;

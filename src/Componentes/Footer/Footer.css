@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
+
+
+.footer {
+    background-color: black;
+    height:200px;
+    margin-top:100px;
+    padding-top:20px;
+}
+.footer__contenedor {
+    display:flex;
+    justify-content: space-between;
+}
+.navegacion {
+    margin-left:20px;
+    color:white;
+    width:30%;
+    font-family: roboto condensed;
+}
+#barra {
+    display:flex;
+    flex-direction: column;
+    width:50px;
+}
+.barraFooter {
+    text-decoration: none;
+    color:white;
+}
+.barraFooter:hover {
+    color:purple;
+}
+.newsletter {
+    width:auto;
+}
+.newsletter__titulo {
+    font-size:20px;
+    color:white;
+    font-family: roboto condensed;
+}
+
+.newsletter__boton {
+    display:flex;
+    margin-top:20px;
+    gap:10px;
+}
+.contenedorRedes {
+    display:flex;
+    flex-direction:column;
+    gap:70px;
+}
+.contenedor-texto {
+    display:flex;
+    margin-right:30px;
+    gap:30px;
+}
+.contenedor-iconos {
+    display:flex;
+    justify-content:flex-end;
+    align-items:flex-end;
+    width:auto;
+    margin-right:30px;
+    gap:10px;
+}
+.icono-link {
+    text-decoration: none;
+}
+
+.icono-footer {
+    color:white;
+    display: flex;
+    margin-top:5px;
+    
+}
+
+.infoTienda {
+    color:white;
+    font-size:20px;
+    font-family: roboto condensed;
+    text-transform: uppercase;
+}
+.infoTienda2 {
+    color:white;
+    font-size:12px;
+    font-family: roboto condensed;
+    text-transform: uppercase;
+}

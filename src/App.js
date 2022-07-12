@@ -9,6 +9,8 @@ import Nosotros from './Componentes/Nosotros/Nosotros';
 import ItemDetailContainer from './Container/ItemDetailContainer';
 import CartContextProvider from './Context/CartContext';
 import Checkout from './Firebase/Checkout';
+import Footer from "./Componentes/Footer/Footer"
+
 
 function App() {
 
@@ -28,6 +30,7 @@ function App() {
             
         
       </Routes>
+      <Footer />
     </CartContextProvider>  
   </BrowserRouter>  
   );

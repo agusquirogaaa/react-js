@@ -1,3 +1,37 @@
 .palabrasNosotros {
     color:white;
 }
+.nosotros {
+    color:white;
+    background-color: black;
+    margin:50px 0px;
+    
+}
+
+.nosotros__texto {
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+.nosotros__politica {
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items:center;
+}
+.tituloNosotros {
+    margin-bottom:40px;
+    margin-top:70px;
+}
+
+.textoLargo {
+    justify-self: center;
+    align-self:center;
+}
+.textoRedes {
+    margin-top:50px;
+}
+.textoDevoluciones {
+    margin-bottom:50px;
+}

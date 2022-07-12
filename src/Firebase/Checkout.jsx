@@ -1,25 +1,42 @@
 import React from 'react'
 import { useState} from "react"
+import {Link} from "react-router-dom"
 import {useCartContext} from "../Context/CartContext"
 import { addDoc, collection, documentId, getDocs, getFirestore, query, where, writeBatch } from'firebase/firestore';
-import "./Checkout.css"
-   
+import "./Checkout.css";
+import swal from "sweetalert";
 
 export default function Checkout() {
     const { cartList, vaciarCarrito, precioTotal, removeItem } = useCartContext()
     const [name, setName] = useState("");
     const [email,setEmail] = useState("");
+    const [email2,setEmail2] = useState("");
     const [celular,setCelular] = useState("");
 
     async function generarOrden() {
         console.log("Quiere comprar", name, email, celular);
-        let orden = {}     
+        if (!name || !email || !celular ) {
+            return swal ({
+                title: "¡Completá el formulario!",
+                text: "Vuelve al carrito, completa el formulario y finaliza tu compra",
+                icon: "warning"
+            });
+        } ;
+        if (email !== email2) {
+            return swal ({
+                title: "¡Completá el formulario!",
+                text: "Los email no coinciden",
+                icon: "warning"
+            });
+        }
         
+
+        let orden = {}     
         orden.buyer = { nombre: name, email: email, celular: celular }
         orden.total = precioTotal()
 
 
-        if (!name || !email || !celular ) return;
+
     
         orden.Items = cartList.map(cartItem => {
             const id = cartItem.id
@@ -33,7 +50,12 @@ export default function Checkout() {
         const db = getFirestore()
         const queryCollection = collection(db, 'Ordenes')
         addDoc(queryCollection, orden)
-        .then(resp => console.log(`${resp.id}`))
+        .then((resp) => swal({
+            title: "¡Tu compra fue realizada con éxito!",
+            text: `Tu número de pedido es: ${resp.id}`,
+            icon: "success",
+            button: "Finalizado",
+          }))
         .catch(err => console.log(err))
         .finally(()=> vaciarCarrito())
 
@@ -88,15 +110,17 @@ export default function Checkout() {
         </div>
             <div className="contenedorHijo2">   
                 <div className="formularioCheckout">
-                    <input onChange={(e)=>setName(e.target.value)} className="btn btn-outline-light" placeholder="ingresa su nombre"></input>
-                    <input onChange={(e)=>setCelular(e.target.value)} className="btn btn-outline-light" placeholder="ingresa su cel"></input>
-                    <input onChange={(e)=>setEmail(e.target.value)} className="btn btn-outline-light" placeholder="ingresa su email"></input>
+                    <input onChange={(e)=>setName(e.target.value)} type="text" className="btn btn-outline-light" placeholder="Ingrese su nombre"></input>
+                    <input onChange={(e)=>setCelular(e.target.value)} type="number" className="btn btn-outline-light" placeholder="Ingrese su celular"></input>
+                    <input onChange={(e)=>setEmail(e.target.value)} type="email" className="btn btn-outline-light" placeholder="Ingrese su email"></input>
+                    <input onChange={(e)=>setEmail2(e.target.value)} type="email" className="btn btn-outline-light" placeholder="Confirme su email"></input>
                 </div>
 
-                <h2>El precio total es: ${precioTotal()}</h2>
-                <div>
+                <h2 className="precioTotalCheckout">El precio total es: ${precioTotal()}</h2> 
+                <div className="botonesCheckout">
                     <button onClick={vaciarCarrito} className='btn btn-outline-light'>Vaciar carrito</button>
-                    <button onClick={generarOrden} className='btn btn-outline-light'>Ralizar compra</button>     
+                    <Link to="/"><button onClick={generarOrden} className='btn btn-outline-light'>Realizar compra</button> </Link>
+                    
                 </div>                                              
             </div>
     </div>
