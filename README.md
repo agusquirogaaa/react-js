@@ -1,7 +1,11 @@
-# Getting Started with Create React App
+# Kurt
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
+Es una pagina de venta de hoodies online. 
+Las librerías que utlice son: 
+- Font Awesome
+- Bootstrap
+- React Router Dom
+- Sweet Alert
 ## Available Scripts
 
 In the project directory, you can run:
