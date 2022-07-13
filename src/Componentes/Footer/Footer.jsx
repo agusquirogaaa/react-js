@@ -46,8 +46,8 @@ const Footer = () => {
                 </div>
                 <div className="contenedor-iconos">
                    <a href="https://www.whatsapp.com" target="_blank" rel="noopener noreferrer" className="icono-link"> <i className="fa-brands fa-whatsapp icono-footer"></i> </a>
-                   <a href="https://www.whatsapp.com" target="_blank" rel="noopener noreferrer" className="icono-link">  <i className="fa-brands fa-instagram icono-footer"></i> </a>
-                   <a href="https://www.whatsapp.com" target="_blank" rel="noopener noreferrer" className="icono-link">  <i className="fa-brands fa-facebook icono-footer"></i> </a>
+                   <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className="icono-link">  <i className="fa-brands fa-instagram icono-footer"></i> </a>
+                   <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" className="icono-link">  <i className="fa-brands fa-facebook icono-footer"></i> </a>
                 </div>
             </div>
         </div>
